@@ -96,6 +96,7 @@ services:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
         - ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub
         - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+        - ~/.ssh/known_hosts:/root/.ssh/known_hosts
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
       ports:
