@@ -737,6 +737,14 @@ RUN if [ ${INSTALL_DUSK_DEPS} = true ]; then \
   && rm chromedriver_linux64.zip \
 ;fi
 
+####################################
+# hologram
+####################################
+RUN apt-get update
+RUN apt-get install ruby-dev -y
+RUN apt-get install rubygems -y
+RUN gem install hologram
+
 ###########################################################################
 # Check PHP version:
 ###########################################################################
